@@ -2,8 +2,10 @@
 
 namespace App\GraphQL\Mutation;
 
+use App\Models\Category;
 use GraphQL;
 use App\Models\Post;
+use App\Models\CategoryPost;
 use GraphQL\Type\Definition\Type;
 use Auth;
 use Rebing\GraphQL\Support\Mutation;
@@ -32,6 +34,11 @@ class NewPostMutation extends Mutation
                 'type' => Type::nonNull(Type::string()),
                 'rules' => ['required'],
             ],
+            'category_id' => [
+                'name' => 'category_id',
+                'type' => Type::nonNull(Type::Int()),
+                'rules' => ['required'],
+            ],
         ];
     }
 
@@ -43,14 +50,22 @@ class NewPostMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        $user = Auth::user();
-        $post = new Post();
+        if($user = Auth::user()) {
 
-        $post->user_id = $user->id;
-        $post->title = $args['title'];
-        $post->body = $args['body'];
-        $post->save();
+            $post = new Post();
 
-        return $post;
+            $post->user_id = $user->id;
+            $post->title = $args['title'];
+            $post->body = $args['body'];
+
+            $post->save();
+
+            $catId = $args['category_id'];
+            $categories = Category::find([$catId]);
+            $post->categories()->attach($categories);
+
+            return $post;
+        }
+        return null;
     }
 }

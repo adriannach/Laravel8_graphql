@@ -6,38 +6,30 @@ use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
-class PostType extends GraphQLType
+class CategoryType extends GraphQLType
 {
     protected $attributes = [
-        'name' => 'Post',
-        'description' => 'Code bit'
+        'name' => 'Category',
+        'description' => 'kategoria'
     ];
 
-    public function fields():array
+    public function fields(): array
     {
         return [
             'id' => [
                 'type' => Type::nonNull(Type::int()),
-                'description' => 'The id of a bit'
-            ],
-            'user' => [
-                'type' => Type::nonNull(GraphQL::type('User')),
-                'description' => 'The user that posted a bit'
+                'description' => 'The id of a reply'
             ],
             'title' => [
-                'type' => Type::string(),
-                'description' => 'tytul'
-            ],
-            'body' => [
-                'type' => Type::string(),
-                'description' => 'tresc'
-            ],
-           'category_id' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'Id kategorii'
+                'description' => 'tytul kategorii'
+            ],
+            'description' => [
+                'type' => Type::nonNull(Type::string()),
+                'description' => 'opis kategorii'
             ],
             'created_at' => [
-                'type' => Type::string(),
+                'type' => Type::int(),
                 'description' => 'Date a bit was created'
             ],
             'updated_at' => [
