@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7191bd9a-b9c6-4ac6-b95a-556ec820a56c" name="Default Changelist" comment="" />
+    <list default="true" id="7191bd9a-b9c6-4ac6-b95a-556ec820a56c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/NewPostCommentMutation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/GraphQL/Type/CommentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +16,14 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="anachtygal" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -142,6 +156,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1hbDUSrYRvwhN6Iso3jV2hmOQzy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -166,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600270916863</updated>
-      <workItem from="1600270917997" duration="9640000" />
+      <workItem from="1600270917997" duration="11684000" />
     </task>
     <servers />
   </component>
@@ -182,5 +197,17 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="470" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1600274297241" />
+    <state x="2758" y="423" key="Github.ShareDialog" timestamp="1600322944040">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2758" y="423" key="Github.ShareDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600322944040" />
+    <state x="2623" y="230" key="Github.UntrackedFilesDialog" timestamp="1600323007084">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2623" y="230" key="Github.UntrackedFilesDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600323007084" />
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600323109031">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600323109031" />
   </component>
 </project>
