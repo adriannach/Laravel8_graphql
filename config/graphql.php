@@ -109,6 +109,7 @@ return [
                 'login' => \App\GraphQL\Mutation\LoginMutation::class,
                 'newPost' => \App\GraphQL\Mutation\NewPostMutation::class,
                 'newComment' => \App\GraphQL\Mutation\NewPostCommentMutation::class,
+                'newCategory' => \App\GraphQL\Mutation\NewCategoryMutation::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
@@ -131,6 +132,7 @@ return [
         'User' => \App\GraphQL\Type\UserType::class,
         'Post' => \App\GraphQL\Type\PostType::class,
         'Comment' => \App\GraphQL\Type\CommentType::class,
+        'Category' => \App\GraphQL\Type\CategoryType::class,
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request

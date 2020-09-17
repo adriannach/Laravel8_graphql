@@ -43,15 +43,19 @@ class NewPostCommentMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        $user = Auth::user();
-        $post = Post::find($args['post_id']);
+        if($user = Auth::user())
+        {
 
-        $com = new Comment();
-        $com->user_id = $user->id;
-        $com->body = $args['body'];
+            $post = Post::find($args['post_id']);
 
-        $post->comments()->save($com);
+            $com = new Comment();
+            $com->user_id = $user->id;
+            $com->body = $args['body'];
 
-        return $com;
+            $post->comments()->save($com);
+
+            return $com;
+        }
+        return null;
     }
 }
