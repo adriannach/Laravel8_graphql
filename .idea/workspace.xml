@@ -19,26 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7191bd9a-b9c6-4ac6-b95a-556ec820a56c" name="Default Changelist" comment="Query Post|Posts">
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/DeleteCategoryMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/UpdateCategoryMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Comment/DeleteCommentMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Comment/UpdateCommentMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/DeletePostMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/UpdatePostMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Query/Category/CategoriesQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Query/Category/CategoryQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Query/Comment/CommentQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Query/Comment/CommentsQuery.php" afterDir="false" />
+    <list default="true" id="7191bd9a-b9c6-4ac6-b95a-556ec820a56c" name="Default Changelist" comment="Comment, Category, Post">
+      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/User/NewPasswordLoginUserMutation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/NewPostMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/NewPostMutation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Type/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Type/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Type/CommentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Type/CommentType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Type/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Type/PostType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Type/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +206,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600270916863</updated>
       <workItem from="1600270917997" duration="32792000" />
-      <workItem from="1600408499874" duration="7149000" />
+      <workItem from="1600408499874" duration="10549000" />
     </task>
     <task id="LOCAL-00001" summary="NewComment">
       <created>1600325194405</created>
@@ -246,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600409799096</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Comment, Category, Post">
+      <created>1600415968545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600415968545</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +257,8 @@
     <MESSAGE value="NewComment" />
     <MESSAGE value="init Category" />
     <MESSAGE value="Query Post|Posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Query Post|Posts" />
+    <MESSAGE value="Comment, Category, Post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment, Category, Post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2638" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1600347184418">
@@ -280,10 +271,10 @@
     </state>
     <state x="2508" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600409108006" />
     <state x="470" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1600274297241" />
-    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600413628765">
+    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600418356989">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600413628765" />
+    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600418356989" />
     <state x="2758" y="423" key="Github.ShareDialog" timestamp="1600322944040">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
@@ -296,10 +287,10 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2659" y="248" key="NewPhpClassDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600342012897" />
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600409803897">
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600415980877">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600409803897" />
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600415980877" />
     <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1600345223820">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
