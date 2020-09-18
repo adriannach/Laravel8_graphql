@@ -101,15 +101,34 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // 'example_query' => ExampleQuery::class,
+                // 'example_query' =
+                //Posts
+                'post' => App\GraphQL\Query\Post\PostQuery::class,
+                'posts' => App\GraphQL\Query\Post\PostsQuery::class,
+                //Category
+                'category' => App\GraphQL\Query\Category\CategoryQuery::class,
+                'categories' => App\GraphQL\Query\Category\CategoriesQuery::class,
+                //Comment
+                'comment' => App\GraphQL\Query\Comment\CommentQuery::class,
+                'comments' => App\GraphQL\Query\Comment\CommentsQuery::class,
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
-                'register' => \App\GraphQL\Mutation\RegisterMutation::class,
-                'login' => \App\GraphQL\Mutation\LoginMutation::class,
-                'newPost' => \App\GraphQL\Mutation\NewPostMutation::class,
-                'newComment' => \App\GraphQL\Mutation\NewPostCommentMutation::class,
-                'newCategory' => \App\GraphQL\Mutation\NewCategoryMutation::class,
+                //User
+                'register' => \App\GraphQL\Mutation\User\RegisterMutation::class,
+                'login' => \App\GraphQL\Mutation\User\LoginMutation::class,
+                //Post
+                'newPost' => \App\GraphQL\Mutation\Post\NewPostMutation::class,
+                'updatePost' => \App\GraphQL\Mutation\Post\UpdatePostMutation::class,
+                'deletePost' => \App\GraphQL\Mutation\Post\DeletePostMutation::class,
+                //Comment
+                'newComment' => \App\GraphQL\Mutation\Comment\NewCommentMutation::class,
+                'updateComment' => \App\GraphQL\Mutation\Comment\UpdateCommentMutation::class,
+                'deleteComment' => \App\GraphQL\Mutation\Comment\DeleteCommentMutation::class,
+                //Category
+                'newCategory' => \App\GraphQL\Mutation\Category\NewCategoryMutation::class,
+                'updateCategory' => \App\GraphQL\Mutation\Category\UpdateCategoryMutation::class,
+                'deleteCategory' => \App\GraphQL\Mutation\Category\DeleteCategoryMutation::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],

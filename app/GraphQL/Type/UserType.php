@@ -18,23 +18,23 @@ class UserType extends GraphQLType
         return [
             'id' => [
                 'type' => Type::nonNull(Type::int()),
-                'description' => 'The id of a user'
+                'description' => 'User id'
             ],
             'name' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'The name of a user'
+                'description' => 'User name'
             ],
             'email' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'The email address of a user'
+                'description' => 'User email'
             ],
             'created_at' => [
                 'type' => Type::string(),
-                'description' => 'Date a was created'
+                'description' => 'User created date'
             ],
             'updated_at' => [
                 'type' => Type::string(),
-                'description' => 'Date a was updated'
+                'description' => 'User updated date'
             ],
         ];
     }

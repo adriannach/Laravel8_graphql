@@ -1,18 +1,18 @@
 <?php
 
-namespace App\GraphQL\Mutation;
+namespace App\GraphQL\Mutation\Comment;
 
-use GraphQL;
 use App\Models\Post;
 use App\Models\Comment;
 use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
 use Auth;
 
-class NewPostCommentMutation extends Mutation
+class UpdateCommentMutation extends Mutation
 {
     protected $attributes = [
-        'name' => 'newComment'
+        'name' => 'updateComment'
     ];
 
     public function type(): type
@@ -23,8 +23,8 @@ class NewPostCommentMutation extends Mutation
     public function args(): array
     {
         return [
-            'post_id' => [
-                'name' => 'post_id',
+            'id' => [
+                'name' => 'id',
                 'type' => Type::nonNull(Type::int()),
                 'rules' => ['required'],
             ],
@@ -45,14 +45,15 @@ class NewPostCommentMutation extends Mutation
     {
         if($user = Auth::user())
         {
+            $com = Comment::find($args['id']);
+            if (!$com) {
+                return null;
+            }
 
-            $post = Post::find($args['post_id']);
 
-            $com = new Comment();
-            $com->user_id = $user->id;
-            $com->body = $args['body'];
-
-            $post->comments()->save($com);
+            $com->update([
+                'body' => $args['body'],
+            ]);
 
             return $com;
         }

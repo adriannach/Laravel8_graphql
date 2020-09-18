@@ -9,6 +9,9 @@ class Post extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = ['title', 'body'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -21,6 +24,14 @@ class Post extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class)
+            ->using(CategoryPost::class)
+            ->withPivot([
+                'id',
+                'title',
+                'description',
+                'created_by',
+                'updated_by'
+            ]);
     }
 }

@@ -18,31 +18,31 @@ class PostType extends GraphQLType
         return [
             'id' => [
                 'type' => Type::nonNull(Type::int()),
-                'description' => 'The id of a bit'
+                'description' => 'Post id'
             ],
             'user' => [
                 'type' => Type::nonNull(GraphQL::type('User')),
-                'description' => 'The user that posted a bit'
+                'description' => 'User created this post'
             ],
             'title' => [
                 'type' => Type::string(),
-                'description' => 'tytul'
+                'description' => 'Post title'
             ],
             'body' => [
                 'type' => Type::string(),
-                'description' => 'tresc'
+                'description' => 'Post body'
             ],
-           'category_id' => [
-                'type' => Type::nonNull(Type::string()),
-                'description' => 'Id kategorii'
+            'category' => [
+                'type' => Type::nonNull(GraphQL::type('Category')),
+                'description' => 'Category'
             ],
             'created_at' => [
                 'type' => Type::string(),
-                'description' => 'Date a bit was created'
+                'description' => 'Created date'
             ],
             'updated_at' => [
                 'type' => Type::string(),
-                'description' => 'Date a bit was updated'
+                'description' => 'Updated date'
             ],
         ];
     }

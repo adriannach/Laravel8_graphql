@@ -18,23 +18,23 @@ class CategoryType extends GraphQLType
         return [
             'id' => [
                 'type' => Type::nonNull(Type::int()),
-                'description' => 'The id of a reply'
+                'description' => 'Category id'
             ],
             'title' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'tytul kategorii'
+                'description' => 'Category title'
             ],
             'description' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'opis kategorii'
+                'description' => 'Category description'
             ],
             'created_at' => [
-                'type' => Type::int(),
-                'description' => 'Date a bit was created'
+                'type' => Type::string(),
+                'description' => 'Category create date'
             ],
             'updated_at' => [
                 'type' => Type::string(),
-                'description' => 'Date a bit was updated'
+                'description' => 'Category update date'
             ],
         ];
     }
