@@ -32,9 +32,9 @@ class PostType extends GraphQLType
                 'type' => Type::string(),
                 'description' => 'tresc'
             ],
-           'category_id' => [
-                'type' => Type::nonNull(Type::string()),
-                'description' => 'Id kategorii'
+            'category' => [
+                'type' => Type::nonNull(GraphQL::type('Category')),
+                'description' => 'The category id'
             ],
             'created_at' => [
                 'type' => Type::string(),

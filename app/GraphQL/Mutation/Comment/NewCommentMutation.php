@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Mutation;
+namespace App\GraphQL\Mutation\Comment;
 
 use GraphQL;
 use App\Models\Post;
@@ -9,7 +9,7 @@ use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 use Auth;
 
-class NewPostCommentMutation extends Mutation
+class NewCommentMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'newComment'

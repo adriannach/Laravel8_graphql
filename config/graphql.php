@@ -101,15 +101,18 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // 'example_query' => ExampleQuery::class,
+                // 'example_query' =
+                //Posts
+                'post' => App\GraphQL\Query\Post\PostQuery::class,
+                'posts' => App\GraphQL\Query\Post\PostsQuery::class,
             ],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
-                'register' => \App\GraphQL\Mutation\RegisterMutation::class,
-                'login' => \App\GraphQL\Mutation\LoginMutation::class,
-                'newPost' => \App\GraphQL\Mutation\NewPostMutation::class,
-                'newComment' => \App\GraphQL\Mutation\NewPostCommentMutation::class,
-                'newCategory' => \App\GraphQL\Mutation\NewCategoryMutation::class,
+                'register' => \App\GraphQL\Mutation\User\RegisterMutation::class,
+                'login' => \App\GraphQL\Mutation\User\LoginMutation::class,
+                'newPost' => \App\GraphQL\Mutation\Post\NewPostMutation::class,
+                'newComment' => \App\GraphQL\Mutation\Comment\NewCommentMutation::class,
+                'newCategory' => \App\GraphQL\Mutation\Category\NewCategoryMutation::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],

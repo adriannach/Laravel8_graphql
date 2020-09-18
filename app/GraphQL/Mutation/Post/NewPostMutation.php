@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Mutation;
+namespace App\GraphQL\Mutation\Post;
 
 use App\Models\Category;
 use GraphQL;
@@ -34,9 +34,9 @@ class NewPostMutation extends Mutation
                 'type' => Type::nonNull(Type::string()),
                 'rules' => ['required'],
             ],
-            'category_id' => [
-                'name' => 'category_id',
-                'type' => Type::nonNull(Type::Int()),
+            'category' => [
+                'name' => 'category',
+                'type' => Type::nonNull(Type::int()),
                 'rules' => ['required'],
             ],
         ];
@@ -60,7 +60,7 @@ class NewPostMutation extends Mutation
 
             $post->save();
 
-            $catId = $args['category_id'];
+            $catId = $args['category'];
             $categories = Category::find([$catId]);
             $post->categories()->attach($categories);
 
