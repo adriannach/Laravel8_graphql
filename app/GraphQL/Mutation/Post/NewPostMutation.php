@@ -3,7 +3,7 @@
 namespace App\GraphQL\Mutation\Post;
 
 use App\Models\Category;
-use GraphQL;
+use Rebing\GraphQL\Support\Facades\GraphQL;
 use App\Models\Post;
 use App\Models\CategoryPost;
 use GraphQL\Type\Definition\Type;

@@ -18,27 +18,27 @@ class CommentType extends GraphQLType
         return [
             'id' => [
                 'type' => Type::nonNull(Type::int()),
-                'description' => 'The id of a reply'
+                'description' => 'Comment Id'
             ],
             'user' => [
                 'type' => Type::nonNull(GraphQL::type('User')),
-                'description' => 'The user '
+                'description' => 'User created comment'
             ],
             'post' => [
                 'type' => Type::nonNull(GraphQL::type('Post')),
-                'description' => 'The post id'
+                'description' => 'Post'
             ],
             'body' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'Tresc komentarza'
+                'description' => 'Comment Body'
             ],
             'created_at' => [
                 'type' => Type::string(),
-                'description' => 'Date a bit was created'
+                'description' => 'Comment create date'
             ],
             'updated_at' => [
                 'type' => Type::string(),
-                'description' => 'Date a bit was updated'
+                'description' => 'Comment update date'
             ],
         ];
     }
