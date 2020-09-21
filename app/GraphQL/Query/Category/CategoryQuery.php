@@ -15,7 +15,7 @@ class CategoryQuery extends Query //zapytania graphql
 
     public function type(): Type//określenie typu
     {
-        return GraphQL::type('Comment');
+        return GraphQL::type('Category');
     }
 
     public function args():array//wyszukanie po id - wymagane

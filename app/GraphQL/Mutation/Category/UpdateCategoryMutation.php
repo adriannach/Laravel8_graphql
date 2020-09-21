@@ -6,7 +6,7 @@ use App\Models\Category;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
-
+use Auth;
 
 class UpdateCategoryMutation extends Mutation
 {
@@ -42,16 +42,20 @@ class UpdateCategoryMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        $cat = Category::find($args['id']);
+        if($user = Auth::user())
+        {
+            $cat = Category::find($args['id']);
 
-        if (!$cat) {
-            return null;
+            if (!$cat) {
+                return null;
+            }
+
+            $cat->update([
+                'title' => $args['title'],
+                'description' => $args['description'],
+            ]);
+            return $cat;
         }
-
-        $cat->update([
-            'title' => $args['title'],
-            'description' => $args['description'],
-        ]);
-        return $cat;
+        return null;
     }
 }

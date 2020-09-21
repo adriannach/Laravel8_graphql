@@ -6,7 +6,7 @@ use App\Models\Category;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
-
+use Auth;
 
 class DeleteCategoryMutation extends Mutation
 {
@@ -32,14 +32,18 @@ class DeleteCategoryMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        $cat = Category::find($args['id']);
+        if($user = Auth::user())
+        {
+            $cat = Category::find($args['id']);
 
-        if (!$cat) {
-            return null;
+            if (!$cat) {
+                return null;
+            }
+
+            Category::destroy($cat->id);
+
+            return $cat;
         }
-
-        Category::destroy($cat->id);
-
-        return $cat;
+        return null;
     }
 }

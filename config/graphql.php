@@ -118,6 +118,8 @@ return [
                 'register' => \App\GraphQL\Mutation\User\RegisterMutation::class,
                 'login' => \App\GraphQL\Mutation\User\LoginMutation::class,
                 'newPasswordLogin' => \App\GraphQL\Mutation\User\NewPasswordLoginUserMutation::class,
+                'forgotPassword' => \App\GraphQL\Mutation\User\ForgotPasswordMutation::class,
+                'forgotPasswordReset' => \App\GraphQL\Mutation\User\ForgotPasswordResetMutation::class,
                 //Post
                 'newPost' => \App\GraphQL\Mutation\Post\NewPostMutation::class,
                 'updatePost' => \App\GraphQL\Mutation\Post\UpdatePostMutation::class,

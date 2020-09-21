@@ -54,17 +54,18 @@ class UpdatePostMutation extends Mutation
                     return null;
                 }
 
+                if(Auth::user()->id == $post->user_id) {
+                    $post->update([
+                        'title' => $args['title'],
+                        'body' => $args['body'],
+                    ]);
 
-                $post->update([
-                    'title' => $args['title'],
-                    'body' => $args['body'],
-                ]);
+                    $catId = $args['category'];
+                    $categories = Category::find([$catId]);
+                    $post->categories()->attach($categories);
 
-                $catId = $args['category'];
-                $categories = Category::find([$catId]);
-                $post->categories()->attach($categories);
-
-                return $post;
+                    return $post;
+                }
             }
             return null;
         }
