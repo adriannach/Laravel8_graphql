@@ -36,11 +36,6 @@ class UpdateCommentMutation extends Mutation
         ];
     }
 
-    public function authenticated($root, $args, $currentUser)
-    {
-        return !!$currentUser;
-    }
-
     public function resolve($root, $args)
     {
         if($user = Auth::user())
@@ -50,12 +45,13 @@ class UpdateCommentMutation extends Mutation
                 return null;
             }
 
+            if(Auth::user()->id == $com->user_id) {
+                $com->update([
+                    'body' => $args['body'],
+                ]);
 
-            $com->update([
-                'body' => $args['body'],
-            ]);
-
-            return $com;
+                return $com;
+            }
         }
         return null;
     }

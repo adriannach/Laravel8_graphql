@@ -22,7 +22,7 @@ class CategoryType extends GraphQLType
             ],
             'title' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'Category title'
+                'description' => 'Category id'
             ],
             'description' => [
                 'type' => Type::nonNull(Type::string()),

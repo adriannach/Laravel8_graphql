@@ -6,7 +6,7 @@ use App\Models\Comment;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
-
+use Auth;
 
 class DeleteCommentMutation extends Mutation
 {
@@ -32,13 +32,19 @@ class DeleteCommentMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        $post = Comment::find($args['id']);
+        $com = Comment::find($args['id']);
 
-        if (!$post) {
+        if (!$com) {
             return null;
         }
-        Comment::destroy($post->id);
 
-        return $post;
+        if(Auth::user()->id == $com->user_id) {
+
+            Comment::destroy($com->id);
+
+            return $com;
+
+        }
+        return null;
     }
 }

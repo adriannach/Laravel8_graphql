@@ -42,12 +42,6 @@ class NewPostMutation extends Mutation
         ];
     }
 
-    public function authenticated($root, $args, $currentUser)
-    {
-        return !!$currentUser;
-    }
-
-
     public function resolve($root, $args)
     {
         if($user = Auth::user()) {

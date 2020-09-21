@@ -6,7 +6,7 @@ use App\Models\Post;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
-
+use Auth;
 
 class DeletePostMutation extends Mutation
 {
@@ -32,13 +32,18 @@ class DeletePostMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        $post = Post::find($args['id']);
+        if($user = Auth::user()) {
+            $post = Post::find($args['id']);
 
-        if (!$post) {
-            return null;
+            if (!$post) {
+                return null;
+            }
+            if(Auth::user()->id == $post->user_id) {
+                Post::destroy($post->id);
+
+                return $post;
+            }
         }
-        Post::destroy($post->id);
-
-        return $post;
+        return null;
     }
 }
