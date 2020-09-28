@@ -155,6 +155,7 @@ return [
         'Post' => \App\GraphQL\Type\PostType::class,
         'Comment' => \App\GraphQL\Type\CommentType::class,
         'Category' => \App\GraphQL\Type\CategoryType::class,
+        'CategoryPost' => \App\GraphQL\Type\CategoryPostType::class,
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request

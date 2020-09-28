@@ -2,6 +2,9 @@
 
 namespace App\GraphQL\Type;
 
+use App\Models\Category;
+use App\Models\CategoryPost;
+use App\Models\Post;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
@@ -34,7 +37,14 @@ class PostType extends GraphQLType
             ],
             'category' => [
                 'type' => Type::nonNull(GraphQL::type('Category')),
-                'description' => 'Category'
+                'description' => 'Category',
+                'resolve' => function($root, $args) {
+                        $categoryPost = CategoryPost::where('post_id', $root['id'])->first();
+                        $categoryPost = $categoryPost->category_id;
+                        $category = Category::findOrFail($categoryPost);
+
+                        return $category;
+                }
             ],
             'created_at' => [
                 'type' => Type::string(),

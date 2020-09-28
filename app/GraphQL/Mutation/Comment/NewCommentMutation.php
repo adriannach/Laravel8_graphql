@@ -40,7 +40,6 @@ class NewCommentMutation extends Mutation
     {
         if($user = Auth::user())
         {
-
             $post = Post::find($args['post_id']);
 
             $com = new Comment();

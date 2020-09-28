@@ -40,12 +40,19 @@ class RegisterMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        $user = User::create([
-            'name' => $args['name'],
-            'email' => $args['email'],
-            'password' => bcrypt($args['password']),
-        ]);
 
+        $user = new User();
+
+        $user->name = $args['name'];
+        $user->email = $args['email'];
+        $user->password = bcrypt($args['password']);
+        $user->role_id=2;
+        $user->save();
+        if($user['id']==1)
+        {
+            $user->role_id=1;
+        }
+        $user->save();
         // generate token for user and return the token
         return auth()->login($user);
     }

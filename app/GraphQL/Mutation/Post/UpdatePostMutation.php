@@ -54,7 +54,7 @@ class UpdatePostMutation extends Mutation
                     return null;
                 }
 
-                if(Auth::user()->id == $post->user_id) {
+                if((Auth::user()->id == $post->user_id) || (Auth::user()->role_id==1)) {
                     $post->update([
                         'title' => $args['title'],
                         'body' => $args['body'],
@@ -62,7 +62,7 @@ class UpdatePostMutation extends Mutation
 
                     $catId = $args['category'];
                     $categories = Category::find([$catId]);
-                    $post->categories()->attach($categories);
+                    $post->categories()->sync($categories);
 
                     return $post;
                 }

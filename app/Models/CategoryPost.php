@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class CategoryPost extends Pivot
 {
-    use HasFactory;
+
 
     public $timestamps = false;
-
 }

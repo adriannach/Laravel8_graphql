@@ -44,21 +44,24 @@ class NewPostMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        if($user = Auth::user()) {
-
-            $post = new Post();
-
-            $post->user_id = $user->id;
-            $post->title = $args['title'];
-            $post->body = $args['body'];
-
-            $post->save();
-
+        if(Auth::user())
+        {
             $catId = $args['category'];
-            $categories = Category::find([$catId]);
-            $post->categories()->attach($categories);
+            $categories = Category::findOrFail([$catId]);
+            if(($user = Auth::user()) && $categories ) {
 
-            return $post;
+                $post = new Post();
+
+                $post->user_id = $user->id;
+                $post->title = $args['title'];
+                $post->body = $args['body'];
+
+                $post->save();
+
+                $post->categories()->attach($categories);
+
+                return $post;
+            }
         }
         return null;
     }
