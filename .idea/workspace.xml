@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7191bd9a-b9c6-4ac6-b95a-556ec820a56c" name="Default Changelist" comment="Login User password reset">
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/User/ForgotPasswordMutation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/User/ForgotPasswordResetMutation.php" afterDir="false" />
+    <list default="true" id="7191bd9a-b9c6-4ac6-b95a-556ec820a56c" name="Default Changelist" comment="Wmail password reset, author detect">
+      <change afterPath="$PROJECT_DIR$/app/GraphQL/Type/CategoryPostType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/DeleteCategoryMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/DeleteCategoryMutation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/NewCategoryMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/NewCategoryMutation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/UpdateCategoryMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Category/UpdateCategoryMutation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Comment/DeleteCommentMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Comment/DeleteCommentMutation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Comment/NewCommentMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Comment/NewCommentMutation.php" afterDir="false" />
@@ -31,10 +31,14 @@
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/DeletePostMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/DeletePostMutation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/NewPostMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/NewPostMutation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/UpdatePostMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/Post/UpdatePostMutation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Query/Category/CategoryQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Query/Category/CategoryQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/GraphQL/Type/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Type/CategoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/User/ForgotPasswordResetMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/User/ForgotPasswordResetMutation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Mutation/User/RegisterMutation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Mutation/User/RegisterMutation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Query/Post/PostsQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Query/Post/PostsQuery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/GraphQL/Type/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/GraphQL/Type/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CategoryPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CategoryPost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/graphql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +223,8 @@
       <updated>1600270916863</updated>
       <workItem from="1600270917997" duration="32792000" />
       <workItem from="1600408499874" duration="22944000" />
-      <workItem from="1600669701661" duration="7031000" />
+      <workItem from="1600669701661" duration="7432000" />
+      <workItem from="1600691782841" duration="34697000" />
     </task>
     <task id="LOCAL-00001" summary="NewComment">
       <created>1600325194405</created>
@@ -256,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600419973295</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Wmail password reset, author detect">
+      <created>1600677505185</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600677505185</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +292,8 @@
     <MESSAGE value="Query Post|Posts" />
     <MESSAGE value="Comment, Category, Post" />
     <MESSAGE value="Login User password reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login User password reset" />
+    <MESSAGE value="Wmail password reset, author detect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wmail password reset, author detect" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2638" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1600347184418">
@@ -293,10 +306,11 @@
     </state>
     <state x="2508" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600409108006" />
     <state x="470" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1600274297241" />
-    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600418356989">
+    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601283153443">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600418356989" />
+    <state x="2610" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1601283153443" />
+    <state x="552" y="222" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1601028691346" />
     <state x="2758" y="423" key="Github.ShareDialog" timestamp="1600322944040">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
@@ -309,10 +323,10 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2659" y="248" key="NewPhpClassDialog/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600342012897" />
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600419979503">
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600677519987">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600419979503" />
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600677519987" />
     <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1600433037560">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>

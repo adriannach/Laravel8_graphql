@@ -38,7 +38,7 @@ class DeletePostMutation extends Mutation
             if (!$post) {
                 return null;
             }
-            if(Auth::user()->id == $post->user_id) {
+            if((Auth::user()->id == $post->user_id) || (Auth::user()->role_id==1)) {
                 Post::destroy($post->id);
 
                 return $post;

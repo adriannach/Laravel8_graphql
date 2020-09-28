@@ -4,10 +4,8 @@ namespace App\GraphQL\Mutation\User;
 
 use App\Models\User;
 use GraphQL\Type\Definition\Type;
-use Illuminate\Auth\Passwords\PasswordBroker;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
 use Rebing\GraphQL\Support\Mutation;
 
 class ForgotPasswordResetMutation extends Mutation

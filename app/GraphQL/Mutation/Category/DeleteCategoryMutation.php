@@ -32,17 +32,18 @@ class DeleteCategoryMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        if($user = Auth::user())
+        if(($user = Auth::user()) && (Auth::user()->role_id==1))
         {
-            $cat = Category::find($args['id']);
 
-            if (!$cat) {
-                return null;
-            }
+                $cat = Category::find($args['id']);
 
-            Category::destroy($cat->id);
+                if (!$cat) {
+                    return null;
+                }
 
-            return $cat;
+                Category::destroy($cat->id);
+
+                return $cat;
         }
         return null;
     }

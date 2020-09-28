@@ -38,7 +38,7 @@ class DeleteCommentMutation extends Mutation
             return null;
         }
 
-        if(Auth::user()->id == $com->user_id) {
+        if((Auth::user()->id == $com->user_id) || (Auth::user()->role_id==1)) {
 
             Comment::destroy($com->id);
 

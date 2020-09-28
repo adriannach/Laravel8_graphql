@@ -42,7 +42,7 @@ class UpdateCategoryMutation extends Mutation
 
     public function resolve($root, $args)
     {
-        if($user = Auth::user())
+        if(($user = Auth::user()) && (Auth::user()->role_id==1))
         {
             $cat = Category::find($args['id']);
 
